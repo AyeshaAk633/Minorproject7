@@ -12,7 +12,7 @@ function Home() {
 
   const fetchPosts = async () => {
     try{
-      const response = await fetch("http://localhost:3000/api/posts/all");
+      const response = await fetch("https://minorproject7.onrender.com/api/posts/all");
       const data = await response.json();
       setPosts(data);
     }catch(error){
@@ -23,7 +23,7 @@ function Home() {
   const deletePost = async (id)=>{
     try{
       const user = JSON.parse(localStorage.getItem("user"));
-      const response= await fetch(`http://localhost:3000/api/posts/delete/${id}`,{
+      const response= await fetch(`https://minorproject7.onrender.com/api/posts/delete/${id}`,{
         method:"DELETE",
         headers:{
           "Content-Type":"application/json"},

@@ -16,7 +16,7 @@ function Profile() {
 
   const fetchUser = async () => {
     try{
-      const response = await fetch(`http://localhost:3000/api/auth/${storedUser._id}`);
+      const response = await fetch(`https://minorproject7.onrender.com/api/auth/${storedUser._id}`);
       const data = await response.json();
       setName(data.name);
       setEmail(data.email);
@@ -30,7 +30,7 @@ function Profile() {
     event.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:3000/api/auth/update/${storedUser._id}`,{
+      const response = await fetch(`https://minorproject7.onrender.com/api/auth/update/${storedUser._id}`,{
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({name, email})

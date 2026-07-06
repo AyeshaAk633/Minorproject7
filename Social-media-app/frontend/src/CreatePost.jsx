@@ -17,7 +17,7 @@ function CreatePost() {
         }
 
         try{
-            const response = await fetch("http://localhost:3000/api/posts/create",{
+            const response = await fetch("https://minorproject7.onrender.com/api/posts/create",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
