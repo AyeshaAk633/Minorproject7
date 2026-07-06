@@ -42,7 +42,7 @@ function Home() {
   const likePost = async (id) =>{
     try{
       const user = JSON.parse(localStorage.getItem("user"));
-      const response = await fetch(`http://localhost:3000/api/posts/like/${id}`,{
+      const response = await fetch(`https://minorproject7.onrender.com/api/posts/like/${id}`,{
         method:"PUT",
         headers:{
           "Content-Type":"application/json"
